@@ -364,6 +364,7 @@ img {
 }
 .bannerCard {
   margin: auto;
+  opacity: 0;
 }
 
 .bannertext1 {
