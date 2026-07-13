@@ -33,3 +33,17 @@ Since taking a small section and turning it into a full page requires more verti
 - Ensure all new pages are fully responsive using Flexbox or CSS Grid.
 
 Please output the HTML/CSS for the updated Navbar first, followed by the complete code for the sub-page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

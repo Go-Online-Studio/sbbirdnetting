@@ -212,7 +212,7 @@ img {
 }
 
 .dropdown-menu li {
-  width: 260px;
+  width: 267px;
   padding: 0 20px;
 }
 
@@ -1179,3 +1179,88 @@ span.fifthH {
 .fancybox__container {
   z-index: 99999 !important;
 }
+/* Custom Dropdown Header Styling */
+.dropdown-menu-large {
+  min-width: 280px;
+}
+.dropdown-header {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 16px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dropdown-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+}
+
+/* Subpage Grid Layout for Desktop and Mobile */
+.subpage-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
+.subpage-intro-item {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.subpage-intro-item p {
+  margin-bottom: 20px;
+}
+
+.subpage-intro-item p:last-child {
+  margin-bottom: 0;
+}
+
+.subpage-image-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop layout rules */
+@media (min-width: 992px) {
+  .subpage-grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "intro intro"
+      "image content";
+    column-gap: 48px; /* matches ps-lg-5 spacing */
+    row-gap: 48px;     /* matches mb-5 spacing */
+    align-items: center;
+  }
+  .subpage-intro-item {
+    grid-area: intro;
+  }
+  .subpage-image-item {
+    grid-area: image;
+  }
+  .subpage-content-item {
+    grid-area: content;
+  }
+}
+
+/* Mobile layout ordering */
+@media (max-width: 991.98px) {
+  .subpage-grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .subpage-image-item {
+    order: 1;
+    margin-bottom: 10px;
+  }
+  .subpage-intro-item {
+    order: 2;
+    margin-bottom: 20px;
+  }
+  .subpage-content-item {
+    order: 3;
+  }
+}
+
