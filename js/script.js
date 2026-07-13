@@ -10,6 +10,12 @@ function debounce(func, delay) {
 $(document).ready(function () {
   const phoneNumber = "919081062820";
 
+  // Set current year dynamically for copyright
+  const yearElement = document.getElementById("current-year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+
   // Function to initialize dynamic WhatsApp links on page load and resize
   function initializeWhatsAppLinks() {
     const isMobile = $(window).width() <= 767.98;
