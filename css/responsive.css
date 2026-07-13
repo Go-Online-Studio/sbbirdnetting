@@ -177,7 +177,15 @@ text-align: left;
 .PageBanner .display-3 {
   font-size: 46px;
   line-height: 84px;
+}
 
+/* Clamp internal padding to max p-3 (16px) for cards */
+.cardVerticle, .testimonialCard, .contactCard, .bannertext1 {
+  padding: 16px !important;
+}
+
+.defaultPadding {
+  padding: 40px 0 !important;
 }
 
  }
