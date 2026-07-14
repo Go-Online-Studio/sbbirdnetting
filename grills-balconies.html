@@ -33,8 +33,6 @@
     }
     </script>
     <script src="https://kit.fontawesome.com/52ca9e0df4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -305,7 +303,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script>
       // Header Script 
@@ -371,85 +368,6 @@
         debouncedApplyNavbarStyles();
         debouncedHandleScroll();
       });
-    </script>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        on: {
-          slideChangeTransitionStart: function () {
-            // Remove animation class from all slides
-            const allItems = document.querySelectorAll('.mySwiper .swiper-slide .bannerCard');
-            allItems.forEach(item => item.classList.remove('animate__fadeInUp'));
-          },
-          slideChangeTransitionEnd: function () {
-            // Add animation class to the active slide
-            const activeItem = document.querySelector('.mySwiper .swiper-slide-active .bannerCard');
-            if (activeItem) {
-              activeItem.classList.add('animate__fadeInUp');
-            }
-          }
-        }
-      });
-      // trigger animation for first slide
-      setTimeout(() => {
-        const activeItem = document.querySelector('.mySwiper .swiper-slide-active .bannerCard');
-        if (activeItem) {
-          activeItem.classList.add('animate__fadeInUp');
-        }
-      }, 500);
-
-      let countersStarted = [false, false];
-      const targets = [999, 450]; // Targets for each counter
-      const durations = [1000, 4050]; // Duration for each counter
-
-      const startCounter = (index) => {
-        let count = 0;
-        const target = targets[index];
-        const duration = durations[index];
-        const incrementTime = Math.floor(duration / target);
-        const counterDisplay = document.getElementById(`counter-${index + 1}`);
-
-        const interval = setInterval(() => {
-          count++;
-          counterDisplay.textContent = count;
-
-          if (count === target) {
-            clearInterval(interval);
-          }
-        }, incrementTime);
-      };
-
-      const onScroll = () => {
-        for (let i = 0; i < countersStarted.length; i++) {
-          const counterSection = document.getElementById(
-            `counter-section-${i + 1}`
-          );
-          const sectionPosition = counterSection.getBoundingClientRect().top;
-
-          // Check if the section is in view
-          if (sectionPosition < window.innerHeight && !countersStarted[i]) {
-            countersStarted[i] = true; // Prevent multiple counts
-            startCounter(i);
-          }
-        }
-      };
-
-      // Add event listener for scroll
-      window.addEventListener("scroll", onScroll);
-
-      // Initial check in case the user refreshes and the sections are already in view
-      window.addEventListener("load", onScroll);
-
-      // increasing number animation end
     </script>
   </body>
 </html>
