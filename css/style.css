@@ -188,9 +188,9 @@ img {
 .miniheader .col-auto a:hover {
   color: var(--green);
 }
-.miniheader .col-auto a i {
+.miniheader .col-auto a svg {
   margin-right: 10px;
-  font-size: 18px;
+  font-size: 16px;
   vertical-align: middle;
 }
 .footer .container > .row,
@@ -251,13 +251,21 @@ img {
 }
 .dropdown-toggle::after {
   margin-left: 0.5em;
-  font-size: 12px;
   vertical-align: middle;
   display: inline-block;
-  content: "\f107";
-  font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  content: "";
   border: none;
+  width: 10px;
+  height: 10px;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M233.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L256%20338.7%2086.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20d%3D%22M233.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L256%20338.7%2086.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%22%2F%3E%3C%2Fsvg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 .buildingTrust p,
 .countCards .fifthH,
@@ -325,8 +333,8 @@ img {
 .Banner .swiper-button-prev::after {
   display: none;
 }
-.Banner .swiper-button-next i,
-.Banner .swiper-button-prev i {
+.Banner .swiper-button-next svg,
+.Banner .swiper-button-prev svg {
   font-size: 35px;
 }
 .container-fluid {
@@ -376,7 +384,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-.bannertext1 p{
+.bannertext1 p {
   margin-bottom: 0;
   color: #ffffff;
 }
@@ -542,8 +550,6 @@ img {
 }
 .imgHoverOverlay::after,
 .testimonialCard::after {
-  font-weight: 900;
-  font-family: "Font Awesome 6 Free";
   left: 50%;
 }
 .whywChooseUs .squareImg {
@@ -586,13 +592,17 @@ img {
   position: relative;
 }
 .imgHoverOverlay::after {
-  content: "\f178";
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M502.6%20278.6c12.5-12.5%2012.5-32.8%200-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3L402.7%20224H32c-17.7%200-32%2014.3-32%2032s14.3%2032%2032%2032h370.7L329.4%20397.4c-12.5%2012.5-12.5%2032.8%200%2045.3s32.8%2012.5%2045.3%200l128-128z%22/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 32px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  font-size: 32px;
-  color: #fff;
   transition: 0.3s;
   opacity: 0;
   pointer-events: none;
@@ -614,20 +624,21 @@ img {
   transition: 0.3s;
 }
 .testimonialCard::after {
-  content: "\f10e";
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20448%20512%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M448%20296c0%2066.3-53.7%20120-120%20120h-8c-17.7%200-32-14.3-32-32s14.3-32%2032-32h8c30.9%200%2056-25.1%2056-56v-8H288c-26.5%200-48-21.5-48-48V144c0-26.5%2021.5-48%2048-48h112c26.5%200%2048%2021.5%2048%2048v152zm-256%200c0%2066.3-53.7%20120-120%20120H64c-17.7%200-32-14.3-32-32s14.3-32%2032-32h8c30.9%200%2056-25.1%2056-56v-8H32c-26.5%200-48-21.5-48-48V144C0%20117.5%2021.5%2096%2048%2096h112c26.5%200%2048%2021.5%2048%2048v152z%22/%3E%3C/svg%3E");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 36px;
   width: 36px;
   top: -18px;
   transform: translateX(-18px);
-  padding-top: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  color: #fff;
-  font-size: 20px;
   border: none;
-  background: var(--skyblue);
+  background-color: var(--skyblue);
   border-radius: 50%;
   z-index: 2;
   box-shadow: 0 4px 10px rgba(12, 113, 195, 0.3);
@@ -686,9 +697,9 @@ img {
   color: #fff;
   margin-bottom: 32px;
 }
-.exploreLinks a i {
+.exploreLinks a svg {
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--green);
 }
 .footer ul {
@@ -701,7 +712,7 @@ img {
 .footer ul li a {
   color: #fff;
 }
-.footer .contact-info i {
+.footer .contact-info svg {
   color: var(--green);
   font-size: 20px;
   margin-right: 10px;
@@ -710,8 +721,8 @@ img {
   display: inline-block;
   padding-left: 22px;
 }
-.locationLink i {
-  position: absolute;
+.footer .contact-info .locationLink svg {
+  position: absolute !important;
   left: 0;
   top: 6px;
 }
@@ -759,7 +770,7 @@ img {
       )
       0 0 / cover no-repeat,
     url("../image/business-07.jpg") 0 0 / cover no-repeat;
-  padding: 80px 0;
+  padding: 80px 8px;
 }
 .PageBanner .display-3 {
   font-size: 60px;
@@ -1106,4 +1117,47 @@ span.fifthH {
   }
 }
 
-.sr-only, .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
+.sr-only,
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ================================================================
+   Local Animation (replaces animate.css CDN)
+   ================================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.banner-card-anim {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+.banner-fade-in {
+  animation-name: fadeInUp;
+}
+
+/* ================================================================
+   Inline SVG icon sizing (replaces FontAwesome rendering)
+   ================================================================ */
+svg.fa-solid,
+svg.fa-brands {
+  display: inline-block;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  overflow: visible;
+}
