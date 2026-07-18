@@ -376,10 +376,13 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-.bannertext1 p,
+.bannertext1 p{
+  margin-bottom: 0;
+  color: #ffffff;
+}
 .copyrightSection p {
   margin-bottom: 0;
-  color: #fff;
+  color: #a0a0a0;
 }
 .bannertext1 .display-3 a {
   font-size: 100px;
@@ -1102,3 +1105,5 @@ span.fifthH {
     order: 3;
   }
 }
+
+.sr-only, .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
